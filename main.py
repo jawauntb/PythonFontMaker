@@ -21,17 +21,18 @@ width = 500
 
 # Iterate through uppercase letters and add them to the font
 for index, letter in enumerate(uppercase_letters):
-    # Create a new glyph with the Unicode codepoint
-    glyph = font.createChar(ord(letter))
+  # Create a new glyph with the Unicode codepoint
+  glyph = font.createChar(ord(letter))
 
-    # Load the corresponding image file
-    image_path = os.path.join(image_folder, f"{letter}.png")
-    glyph.importOutlines(image_path)
+  # Load the corresponding image file
+  image_path = os.path.join(image_folder, f"{letter}.png")
+  glyph.importOutlines(image_path)
 
-    # Set glyph properties
-    glyph.width = width
-    glyph.vwidth = width
-    glyph.align("baseline", baseline)
+  # Set glyph properties
+  glyph.width = width
+  glyph.vwidth = width
+  glyph.align("baseline", baseline)
 
 # Generate the TTF file
 font.generate("MyCustomFont.ttf")
+# first push
